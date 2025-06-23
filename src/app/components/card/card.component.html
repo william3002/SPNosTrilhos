@@ -1,0 +1,13 @@
+@for (item of dadosApi; track $index) {
+<div class="mx-auto border my-10 w-80 p-4 rounded-xl shadow-xl text-center space-y-5">
+
+    <h2 [ngClass]="coresDaLinha(item.codigo)" class="w-full p-2 rounded-md text-white text-xl">Linha: {{item.codigo}} - {{nomeDaLinha(item.codigo)}}</h2>
+
+    <p [ngClass]="item.situacao === 'Operação Normal' ? 'text-green-500' : 'text-red-500'" class="font-semibold">Situação: {{item.situacao}}</p>
+    <p><span class="font-semibold ">Ultima atualização:</span> {{item.criado | date:'dd/MM/yyyy ' }} {{item.modificado | date: 'HH:mm' }}</p>
+
+    @if (item.descricao) {
+    <p><span class="font-semibold">Descrição:</span> {{item.descricao}}🚧</p>
+    }
+</div>
+}
