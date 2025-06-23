@@ -30,10 +30,14 @@ export class CardComponent implements OnInit {
   }
   
   nomeDaLinha(codigo: number): string {
-    return this.service.linesTranslate.get(codigo.toString()) || 'Desconhecida'
+    return this.service.linhasMap.get(codigo.toString())?.nome || 'Desconhecida'
   }
 
-  coresDaLinha(cor:number):string{
-    return this.service.coresDaLinha.get(cor.toString()) || 'bg-black-500'
+  coresDaLinha(codigo:number):string{
+    return this.service.linhasMap.get(codigo.toString())?.cor || 'bg-black-500'
+  }
+
+  imagemMap(codigo:number):string{
+    return this.service.linhasMap.get(codigo.toString())?.imagem || '❌'
   }
 }

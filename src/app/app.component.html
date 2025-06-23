@@ -1,7 +1,16 @@
-<div class="p-3 mx-auto text-center">
-  <h1 class="text-xl font-bold mb-3">Status - Estações de metrô de SP</h1>
-  <p class="px-2">Esteja sempre informado sobre alterações e incidentes nas linhas do Metrô de SP, ViaMobilidade e CPTM com
+<div class="flex flex-col items-center relative p-3 justify-center text-center w-screen dark:bg-zinc-900">
+  <button (click)="alterarCor()" class="fixed top-4 right-4 z-50 bg-white rounded-full p-2">
+    <img class="w-10" src="assets/sol-e-lua.png" alt="sol e lua">
+  </button>
+  
+  <h1 class="text-xl font-bold mb-3 md:text-2xl dark:text-white">
+    Status - Estações de metrô de SP
+  </h1>
+  
+  <p class="px-2 w-96 lg:w-[400px] mb-10 dark:text-white">Esteja sempre informado sobre alterações e incidentes nas linhas do
+    Metrô
+    de SP, ViaMobilidade e CPTM com
     atualizações frequentes.</p>
-  <app-card></app-card>
+  <app-card class="md:grid md:grid-cols-2 lg:grid-cols-3 gap-8 "></app-card>
 </div>
 <router-outlet />

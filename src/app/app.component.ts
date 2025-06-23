@@ -10,5 +10,7 @@ import { CardComponent } from "./components/card/card.component";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'metroStatus';
+  alterarCor(){
+    document.documentElement.classList.toggle('dark')
+  }
 }

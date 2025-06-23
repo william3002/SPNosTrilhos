@@ -1,13 +1,13 @@
 @for (item of dadosApi; track $index) {
-<div class="mx-auto border my-10 w-80 p-4 rounded-xl shadow-xl text-center space-y-5">
-
+<div class="relative mx-auto border w-80 p-4 rounded-xl shadow-xl text-center space-y-5 dark:shadow-slate-500 dark:shadow-md ">
+    <img class="absolute top-[-20px] left-[135px] w-10 h-10 rounded-md" [src]="imagemMap(item.codigo)" alt="">
     <h2 [ngClass]="coresDaLinha(item.codigo)" class="w-full p-2 rounded-md text-white text-xl">Linha: {{item.codigo}} - {{nomeDaLinha(item.codigo)}}</h2>
 
     <p [ngClass]="item.situacao === 'Operação Normal' ? 'text-green-500' : 'text-red-500'" class="font-semibold">Situação: {{item.situacao}}</p>
-    <p><span class="font-semibold ">Ultima atualização:</span> {{item.criado | date:'dd/MM/yyyy ' }} {{item.modificado | date: 'HH:mm' }}</p>
+    <p class="dark:text-white"><span class="font-semibold dark:text-white">Ultima atualização:</span> {{item.criado | date:'dd/MM/yyyy ' }} {{item.modificado | date: 'HH:mm' }}</p>
 
     @if (item.descricao) {
-    <p><span class="font-semibold">Descrição:</span> {{item.descricao}}🚧</p>
+    <p><span class="font-semibold dark:text-white">Descrição:</span> {{item.descricao}}🚧</p>
     }
 </div>
 }
