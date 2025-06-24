@@ -1,9 +1,9 @@
-<div class="flex flex-col items-center relative p-3 justify-center text-center w-screen dark:bg-zinc-900">
-  <button (click)="alterarCor()" class="fixed top-4 right-4 z-50 bg-white rounded-full p-2">
+<div class="flex flex-col items-center relative p-3 justify-center text-center w-screen dark:bg-zinc-900 ">
+  <button (click)="alterarCor()" class="border fixed top-[140px] right-6 md:top-4 md:right-4 xl:right-20 xl:top-16 z-50 bg-white rounded-full p-2 active:rotate-180 duration-300 transition-transform">
     <img class="w-10" src="assets/sol-e-lua.png" alt="sol e lua">
   </button>
   
-  <h1 class="text-xl font-bold mb-3 md:text-2xl dark:text-white">
+  <h1 class="text-xl font-bold mb-3 md:text-2xl lg:text-3xl dark:text-white">
     Status - Estações de metrô de SP
   </h1>
   
@@ -11,6 +11,6 @@
     Metrô
     de SP, ViaMobilidade e CPTM com
     atualizações frequentes.</p>
-  <app-card class="md:grid md:grid-cols-2 lg:grid-cols-3 gap-8 "></app-card>
+  <app-card class="md:grid md:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:gap-8 "></app-card>
 </div>
 <router-outlet />

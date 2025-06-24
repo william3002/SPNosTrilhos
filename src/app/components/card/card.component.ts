@@ -2,6 +2,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { MetroService } from '../../services/metro.service';
 import { MetroModels } from '../../models/metro-models';
 import { CommonModule } from '@angular/common';
+import { linhasMap } from '../../types/maps-types';
 
 @Component({
   selector: 'app-card',
@@ -30,14 +31,14 @@ export class CardComponent implements OnInit {
   }
   
   nomeDaLinha(codigo: number): string {
-    return this.service.linhasMap.get(codigo.toString())?.nome || 'Desconhecida'
+    return linhasMap.get(codigo.toString())?.nome || 'Desconhecida'
   }
 
   coresDaLinha(codigo:number):string{
-    return this.service.linhasMap.get(codigo.toString())?.cor || 'bg-black-500'
+    return linhasMap.get(codigo.toString())?.cor || 'bg-black-500'
   }
 
   imagemMap(codigo:number):string{
-    return this.service.linhasMap.get(codigo.toString())?.imagem || '❌'
+    return linhasMap.get(codigo.toString())?.imagem || '❌'
   }
 }
